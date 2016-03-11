@@ -1,0 +1,444 @@
+﻿<UserControl
+    x:Class="ClassLibrary.UserControls.MyCustomLoading"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ClassLibrary.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+       xmlns:Interactivity="using:Microsoft.Xaml.Interactivity" xmlns:Core="using:Microsoft.Xaml.Interactions.Core" xmlns:Media="using:Microsoft.Xaml.Interactions.Media"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+
+
+    <UserControl.Resources>
+        <Storyboard x:ConnectionId='1' x:Name="Storyboard1" RepeatBehavior="Forever" AutoReverse="False">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)" Storyboard.TargetName="rectangle1">
+                <EasingDoubleKeyFrame KeyTime="0:0:6" Value="720">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:12" Value="1440">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimation Duration="0:0:6" To="1" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="rectangle1" d:IsOptimized="True">
+                <DoubleAnimation.EasingFunction>
+                    <CubicEase EasingMode="EaseInOut"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Duration="0:0:6" To="1" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="rectangle1" d:IsOptimized="True">
+                <DoubleAnimation.EasingFunction>
+                    <CubicEase EasingMode="EaseInOut"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)" Storyboard.TargetName="rectangle">
+                <EasingDoubleKeyFrame KeyTime="0:0:6.3" Value="720">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:12.3" Value="1440">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)" Storyboard.TargetName="rectangle2">
+                <EasingDoubleKeyFrame KeyTime="0:0:6.8" Value="720">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:12.8" Value="1440">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+
+
+            <DoubleAnimation Duration="0:0:6.3" To="1" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="rectangle" d:IsOptimized="True">
+                <DoubleAnimation.EasingFunction>
+                    <CubicEase EasingMode="EaseInOut"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Duration="0:0:6.8" To="1" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="rectangle2" d:IsOptimized="True">
+                <DoubleAnimation.EasingFunction>
+                    <CubicEase EasingMode="EaseInOut"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Duration="0:0:6.3" To="1" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="rectangle" d:IsOptimized="True">
+                <DoubleAnimation.EasingFunction>
+                    <CubicEase EasingMode="EaseInOut"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Duration="0:0:6.8" To="1" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="rectangle2" d:IsOptimized="True">
+                <DoubleAnimation.EasingFunction>
+                    <CubicEase EasingMode="EaseInOut"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+
+
+            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(UIElement.RenderTransformOrigin)" Storyboard.TargetName="rectangle1">
+                <EasingPointKeyFrame KeyTime="0:0:6" Value="0.5,0.5">
+                    <EasingPointKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingPointKeyFrame.EasingFunction>
+                </EasingPointKeyFrame>
+                <EasingPointKeyFrame KeyTime="0:0:12" Value="0.5,0.5">
+                    <EasingPointKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingPointKeyFrame.EasingFunction>
+                </EasingPointKeyFrame>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(UIElement.RenderTransformOrigin)" Storyboard.TargetName="rectangle">
+                <EasingPointKeyFrame KeyTime="0:0:6.3" Value="0.5,0.5">
+                    <EasingPointKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingPointKeyFrame.EasingFunction>
+                </EasingPointKeyFrame>
+                <EasingPointKeyFrame KeyTime="0:0:12.3" Value="0.5,0.5">
+                    <EasingPointKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingPointKeyFrame.EasingFunction>
+                </EasingPointKeyFrame>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(UIElement.RenderTransformOrigin)" Storyboard.TargetName="rectangle2">
+                <EasingPointKeyFrame KeyTime="0:0:6.8" Value="0.5,0.5">
+                    <EasingPointKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingPointKeyFrame.EasingFunction>
+                </EasingPointKeyFrame>
+                <EasingPointKeyFrame KeyTime="0:0:12.8" Value="0.5,0.5">
+                    <EasingPointKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingPointKeyFrame.EasingFunction>
+                </EasingPointKeyFrame>
+            </PointAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="rectangle1">
+
+
+                <EasingDoubleKeyFrame KeyTime="0" Value="-50"/>
+
+
+                <EasingDoubleKeyFrame KeyTime="0:0:6" Value="50">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:12" Value="-50">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="rectangle">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-50"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:6.3" Value="50">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:12.3" Value="-50">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="rectangle2">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-50"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:6.8" Value="50">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:12.8" Value="-50">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+
+
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimation Duration="0:0:6" To="0" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="rectangle1" d:IsOptimized="True">
+                <DoubleAnimation.EasingFunction>
+                    <CubicEase EasingMode="EaseInOut"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Duration="0:0:6.3" To="0" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="rectangle" d:IsOptimized="True">
+                <DoubleAnimation.EasingFunction>
+                    <CubicEase EasingMode="EaseInOut"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Duration="0:0:6.8" To="0" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="rectangle2" d:IsOptimized="True">
+                <DoubleAnimation.EasingFunction>
+                    <CubicEase EasingMode="EaseInOut"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+
+
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle1">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="0.7"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:6" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:9" Value="0.7"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:12" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.3" Value="0.7"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:6.3" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:9.3" Value="0.7"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:12.3" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle2">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.8" Value="0.7"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:6.8" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:9.8" Value="0.7"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:12.8" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)" Storyboard.TargetName="rectangle3">
+                <EasingDoubleKeyFrame KeyTime="0:0:7.2" Value="720">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:13.2" Value="1440">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimation Duration="0:0:7.2" To="1" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="rectangle3" d:IsOptimized="True">
+                <DoubleAnimation.EasingFunction>
+                    <CubicEase EasingMode="EaseInOut"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Duration="0:0:7.2" To="1" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="rectangle3" d:IsOptimized="True">
+                <DoubleAnimation.EasingFunction>
+                    <CubicEase EasingMode="EaseInOut"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(UIElement.RenderTransformOrigin)" Storyboard.TargetName="rectangle3">
+                <EasingPointKeyFrame KeyTime="0:0:7.2" Value="0.5,0.5">
+                    <EasingPointKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingPointKeyFrame.EasingFunction>
+                </EasingPointKeyFrame>
+                <EasingPointKeyFrame KeyTime="0:0:13.2" Value="0.5,0.5">
+                    <EasingPointKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingPointKeyFrame.EasingFunction>
+                </EasingPointKeyFrame>
+            </PointAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="rectangle3">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="-50"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:7.2" Value="50">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:13.2" Value="-50">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+
+
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimation Duration="0:0:7.2" To="0" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="rectangle3" d:IsOptimized="True">
+                <DoubleAnimation.EasingFunction>
+                    <CubicEase EasingMode="EaseInOut"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle3">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.2" Value="0.7"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:7.2" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:10.2" Value="0.7"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:13.2" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)" Storyboard.TargetName="rectangle4">
+                <EasingDoubleKeyFrame KeyTime="0:0:7.9" Value="720">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:13.9" Value="1440">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimation Duration="0:0:7.9" To="1" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="rectangle4" d:IsOptimized="True">
+                <DoubleAnimation.EasingFunction>
+                    <CubicEase EasingMode="EaseInOut"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Duration="0:0:7.9" To="1" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="rectangle4" d:IsOptimized="True">
+                <DoubleAnimation.EasingFunction>
+                    <CubicEase EasingMode="EaseInOut"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(UIElement.RenderTransformOrigin)" Storyboard.TargetName="rectangle4">
+                <EasingPointKeyFrame KeyTime="0:0:7.9" Value="0.5,0.5">
+                    <EasingPointKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingPointKeyFrame.EasingFunction>
+                </EasingPointKeyFrame>
+                <EasingPointKeyFrame KeyTime="0:0:13.9" Value="0.5,0.5">
+                    <EasingPointKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingPointKeyFrame.EasingFunction>
+                </EasingPointKeyFrame>
+            </PointAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="rectangle4">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="-50"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:7.9" Value="50">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:13.9" Value="-50">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+
+
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimation Duration="0:0:7.9" To="0" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="rectangle4" d:IsOptimized="True">
+                <DoubleAnimation.EasingFunction>
+                    <CubicEase EasingMode="EaseInOut"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle4">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.9" Value="0.7"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:7.9" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:10.9" Value="0.7"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:13.9" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)" Storyboard.TargetName="rectangle5">
+                <EasingDoubleKeyFrame KeyTime="0:0:8.6" Value="720">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:14.6" Value="1440">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimation Duration="0:0:8.6" To="1" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="rectangle5" d:IsOptimized="True">
+                <DoubleAnimation.EasingFunction>
+                    <CubicEase EasingMode="EaseInOut"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Duration="0:0:8.6" To="1" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="rectangle5" d:IsOptimized="True">
+                <DoubleAnimation.EasingFunction>
+                    <CubicEase EasingMode="EaseInOut"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(UIElement.RenderTransformOrigin)" Storyboard.TargetName="rectangle5">
+                <EasingPointKeyFrame KeyTime="0:0:8.6" Value="0.5,0.5">
+                    <EasingPointKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingPointKeyFrame.EasingFunction>
+                </EasingPointKeyFrame>
+                <EasingPointKeyFrame KeyTime="0:0:14.6" Value="0.5,0.5">
+                    <EasingPointKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingPointKeyFrame.EasingFunction>
+                </EasingPointKeyFrame>
+            </PointAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="rectangle5">
+                <EasingDoubleKeyFrame KeyTime="0:0:2.6" Value="-50"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:8.6" Value="50">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:14.6" Value="-50">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+
+
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimation Duration="0:0:8.6" To="0" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="rectangle5" d:IsOptimized="True">
+                <DoubleAnimation.EasingFunction>
+                    <CubicEase EasingMode="EaseInOut"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle5">
+                <EasingDoubleKeyFrame KeyTime="0:0:2.6" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:5.6" Value="0.7"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:8.6" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:11.6" Value="0.7"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:14.6" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+
+        <Style TargetType="Rectangle">
+
+            <Setter Property="Height" Value="15" />
+            <Setter Property="Width" Value="15" />
+            <Setter Property="Fill" Value="{ThemeResource SystemAccentColor}"/>
+        </Style>
+
+    </UserControl.Resources>
+
+
+
+    <!--<Page.Triggers>
+        <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="TheButton">
+            <BeginStoryboard Storyboard="{StaticResource TheStoryboard}"/>
+        </EventTrigger>
+    </Page.Triggers>-->
+
+
+    <Grid Background="Transparent" >
+
+        <Rectangle x:ConnectionId='2' x:Name="rectangle1"     Stroke="Black"    Opacity="0.7" StrokeThickness="0" RenderTransformOrigin="0.5,0.5"  >
+            <Rectangle.RenderTransform>
+                <CompositeTransform Rotation="0"/>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle x:ConnectionId='3' x:Name="rectangle"    Stroke="Black"   Opacity="0.7" StrokeThickness="0" RenderTransformOrigin="0.5,0.5"  >
+            <Rectangle.RenderTransform>
+                <CompositeTransform Rotation="0"/>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle x:ConnectionId='4' x:Name="rectangle2"    Stroke="Black"   Opacity="0.7" StrokeThickness="0" RenderTransformOrigin="0.5,0.5"  >
+            <Rectangle.RenderTransform>
+                <CompositeTransform Rotation="0"/>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle x:ConnectionId='5' x:Name="rectangle3"     Stroke="Black"    Opacity="0.7" StrokeThickness="0" RenderTransformOrigin="0.5,0.5"   >
+            <Rectangle.RenderTransform>
+                <CompositeTransform Rotation="0"/>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle x:ConnectionId='6' x:Name="rectangle4"     Stroke="Black"    Opacity="0.7" StrokeThickness="0" RenderTransformOrigin="0.5,0.5"  >
+            <Rectangle.RenderTransform>
+                <CompositeTransform Rotation="0"/>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle x:ConnectionId='7' x:Name="rectangle5"     Stroke="Black"    Opacity="0.7" StrokeThickness="0" RenderTransformOrigin="0.5,0.5"  >
+            <Rectangle.RenderTransform>
+                <CompositeTransform Rotation="0"/>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+
+    </Grid>
+
+</UserControl>
+

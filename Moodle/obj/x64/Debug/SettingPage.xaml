@@ -1,0 +1,30 @@
+﻿<Page
+    x:Class="MoodleManager.SettingPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MoodleManager"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel Orientation="Vertical">
+        <ToggleSwitch x:ConnectionId='1' Name="triggerButton"                                   Header="Background Notification" OnContent="On" OffContent="Off"/>
+        <ComboBox x:ConnectionId='2' Name="NotifyTime"                                                Header="Refresh time (minutes)" PlaceholderText="Pick the time" Width="200">
+            <x:Int32>30</x:Int32>
+            <x:Int32>60</x:Int32>
+            <x:Int32>120</x:Int32>
+            <x:Int32>360</x:Int32>
+            <x:Int32>720</x:Int32>
+            <x:Int32>1440</x:Int32>
+        </ComboBox>
+        <ComboBox x:ConnectionId='3' Name="LimitDay"                                              Header="Limit time" PlaceholderText="Pick the time" Width="200">
+            <x:String>1 week</x:String>
+            <x:String>2 weeks</x:String>
+            <x:String>3 weeks</x:String>
+            <x:String>4 weeks</x:String>
+        </ComboBox>
+        </StackPanel>
+    </Grid>
+</Page>
+

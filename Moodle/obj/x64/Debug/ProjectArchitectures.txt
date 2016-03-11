@@ -1,0 +1,4 @@
+C:\Users\user\Documents\Visual Studio 2015\Projects\MoodleManager\BackgroundNotification\BackgroundNotification.csproj;x64
+C:\Users\user\Documents\Visual Studio 2015\Projects\MoodleManager\ClassLibrary\ClassLibrary.csproj;x64
+C:\Users\user\Documents\Visual Studio 2015\Projects\MoodleManager\ClassLibrary\ClassLibrary.csproj;x64
+C:\Users\user\Documents\Visual Studio 2015\Projects\MoodleManager\Moodle\MoodleManager.csproj;x64

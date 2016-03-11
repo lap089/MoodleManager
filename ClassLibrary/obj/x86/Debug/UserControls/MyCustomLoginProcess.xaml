@@ -1,0 +1,211 @@
+﻿<UserControl x:ConnectionId='1'
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ClassLibrary.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Interactivity="using:Microsoft.Xaml.Interactivity" xmlns:Core="using:Microsoft.Xaml.Interactions.Core" xmlns:Media="using:Microsoft.Xaml.Interactions.Media"
+    x:Class="ClassLibrary.UserControls.MyCustomLoginProcess"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400"
+    Name="myCustomLoginProcess"
+    xmlns:converter="using:ClassLibrary.Converters"
+                                                                                                  >
+
+    <UserControl.Resources>
+        <converter:BooleanToVisibility2 x:Key="BooleanToVisibility2" />
+        
+        <DataTemplate x:ConnectionId='2' x:Name="Ring">
+            <Path Fill="{StaticResource SystemControlBackgroundAccentBrush}" x:Name="Path" Width="50" Height="20" Canvas.Left="-1.90337e-006" Canvas.Top="-2.28882e-005" Stretch="Fill" Data="F1 M 246.944,0.0519791C 245.039,0.0559616 243.881,1.19329 243.232,2.83465L 243.232,2.83465C 239.299,12.7373 237.103,22.9493 237.408,33.684L 237.408,33.684C 237.697,43.8666 237.063,54.076 238.084,64.1013L 238.084,64.1013C 237.987,63.968 237.7,63.6666 237.509,63.312L 237.509,63.312C 235.96,60.4 234.277,57.5466 232.917,54.5466L 232.917,54.5466C 226.272,39.8786 224.853,24.3093 225.159,8.45728L 225.159,8.45728C 225.203,6.09595 225.164,3.73064 225.164,1.34666L 225.164,1.34666C 224.972,1.36399 224.812,1.36265 224.657,1.39332L 224.657,1.39332C 213.78,3.47332 202.909,5.59332 192.023,7.62664L 192.023,7.62664C 187.708,8.43198 185.56,10.336 185.02,14.7053L 185.02,14.7053C 183.885,23.8693 183.364,33.076 183.829,42.3066L 183.829,42.3066C 184.056,46.8013 184.476,51.2866 184.831,56.0866L 184.831,56.0866C 177.256,42.6946 175.432,28.08 173.771,13.24L 173.771,13.24C 172.607,13.4786 171.616,13.5133 170.773,13.8826L 170.773,13.8826C 157.997,19.4786 145.241,25.1173 132.483,30.7533L 132.483,30.7533C 130.499,31.6293 129.415,33.176 129.268,35.3413L 129.268,35.3413C 128.424,47.6933 131.451,58.896 139.239,68.6546L 139.239,68.6546C 140.705,70.492 142.336,72.2026 144.109,74.2187L 144.109,74.2187C 130.5,68.6853 121.949,58.4466 115.396,46.0413L 115.396,46.0413C 114.035,48.0933 112.781,50.008 111.503,51.904L 111.503,51.904C 108.197,56.8106 104.892,61.716 102.731,67.276L 102.731,67.276C 97.7,80.2253 92.7346,93.2027 87.6146,106.117L 87.6146,106.117C 84.144,114.869 80.5867,123.595 76.82,132.223L 76.82,132.223C 74.1333,138.379 69.676,142.909 63.4533,145.803L 63.4533,145.803C 55.124,149.675 46.3973,151.103 37.3307,150.657L 37.3307,150.657C 33.5093,150.469 29.6973,149.917 25.904,149.379L 25.904,149.379C 23.3813,149.02 22.5947,147.357 23.7507,145.085L 23.7507,145.085C 24.2533,144.097 25.1107,143.283 25.5693,142.279L 25.5693,142.279C 26.4653,140.321 27.32,138.327 27.9173,136.265L 27.9173,136.265C 28.1267,135.547 27.8,134.264 27.2467,133.805L 27.2467,133.805C 24.9253,131.879 22.2973,130.319 19.1333,130.649L 19.1333,130.649C 13.6027,131.223 8.85733,133.529 5.43067,137.985L 5.43067,137.985C 3.42933,140.587 1.79734,143.472 -1.90337e-006,146.229L -1.90337e-006,152.632C 0.205336,152.857 0.449334,153.064 0.611998,153.319L 0.611998,153.319C 3.912,158.475 8.60933,161.801 14.336,163.753L 14.336,163.753C 22.9853,166.704 31.896,168.171 41.0227,168.131L 41.0227,168.131C 53.8373,168.077 66.2333,165.783 78.0947,160.829L 78.0947,160.829C 79.14,160.392 80.2133,160.025 81.664,159.48L 81.664,159.48C 79.3493,162.256 77.292,164.628 75.3427,167.084L 75.3427,167.084C 70.4693,173.233 67.0693,180.048 65.5787,187.837L 65.5787,187.837C 64.6613,192.636 63.428,197.395 62.0533,202.087L 62.0533,202.087C 60.9067,205.999 61.1693,209.679 62.9773,213.237L 62.9773,213.237C 64.9267,217.081 67.7693,220.171 72.3053,220.368L 72.3053,220.368C 80.1267,220.712 87.9666,220.677 95.8,220.697L 95.8,220.697C 97.7573,220.701 99.6227,220.087 100.76,218.267L 100.76,218.267C 103.511,213.868 101.168,207.297 96.248,205.664L 96.248,205.664C 94.664,205.139 93.0253,204.776 91.1547,204.271L 91.1547,204.271C 94.6973,198.259 98.0693,192.34 101.664,186.556L 101.664,186.556C 102.857,184.639 104.44,182.861 106.167,181.399L 106.167,181.399C 112.309,176.204 118.505,171.067 124.836,166.105L 124.836,166.105C 134.483,158.543 144.284,151.175 153.972,143.665L 153.972,143.665C 159.764,139.172 166.125,135.813 173.113,133.637L 173.113,133.637C 177.392,132.303 179.145,133.215 180.801,137.347L 180.801,137.347C 182.739,142.188 184.736,147.004 186.761,151.808L 186.761,151.808C 188.885,156.852 189.759,162.061 188.472,167.42L 188.472,167.42C 187.744,170.456 186.625,173.409 185.557,176.356L 185.557,176.356C 183.769,181.279 184.871,185.356 188.956,188.608L 188.956,188.608C 200.215,197.569 211.405,206.621 222.779,215.436L 222.779,215.436C 230.068,221.084 238.291,223.999 247.753,223.488L 247.753,223.488C 252.16,223.251 256.584,223.323 261.009,223.395L 261.009,223.395C 263.84,223.441 266.672,223.488 269.501,223.452L 269.501,223.452C 270.903,223.433 272.363,222.808 273.667,222.191L 273.667,222.191C 274.933,221.592 275.284,220.289 274.781,219.027L 274.781,219.027C 272.597,213.547 268.209,208.337 260.219,210.037L 260.219,210.037C 258.956,210.307 257.555,210.368 256.3,210.115L 256.3,210.115C 254.011,209.652 251.792,208.853 249.532,208.241L 249.532,208.241C 245.671,207.199 242.38,205.408 239.965,202.035L 239.965,202.035C 236.105,196.639 233.273,190.759 231.513,184.412L 231.513,184.412C 230.876,182.111 230.824,179.556 230.961,177.144L 230.961,177.144C 231.241,172.265 233.159,167.832 235.44,163.592L 235.44,163.592C 240.031,155.059 244.776,146.605 249.353,138.064L 249.353,138.064C 252.195,132.764 254.753,127.308 257.621,122.027L 257.621,122.027C 259.517,118.537 261.731,117.464 265.612,118.357L 265.612,118.357C 272.611,119.971 279.577,121.753 286.492,123.703L 286.492,123.703C 296.684,126.571 306.752,129.915 317.003,132.564L 317.003,132.564C 327.465,135.267 338.203,136.387 349.02,135.687L 349.02,135.687C 359.083,135.032 369.14,134.611 379.213,135.057L 379.213,135.057C 382.383,135.199 385.656,135.251 388.669,136.1L 388.669,136.1C 393.419,137.439 393.973,138.915 392.141,143.527L 392.141,143.527C 390.208,148.388 389.867,153.283 390.88,158.405L 390.88,158.405C 391.852,163.308 392.8,168.253 393.225,173.225L 393.225,173.225C 394.307,185.852 394.408,198.564 396.468,211.112L 396.468,211.112C 397.148,215.259 397.687,219.425 398.315,223.74L 398.315,223.74C 416.219,224.287 434.008,226.704 451.989,224.303L 451.989,224.303C 449.731,220.201 446.299,217.535 443.101,214.664L 443.101,214.664C 439.407,211.348 435.113,209.983 430.113,210.665L 430.113,210.665C 426.031,211.223 423.728,209.512 422.397,205.605L 422.397,205.605C 420.643,200.443 421.823,195.769 424.4,191.223L 424.4,191.223C 430.413,180.616 436.377,169.98 442.369,159.36L 442.369,159.36C 444.056,156.368 445.193,155.925 448.343,157.329L 448.343,157.329C 452.085,158.999 455.736,160.876 459.473,162.559L 459.473,162.559C 476.68,170.305 493.479,178.824 509.613,188.625L 509.613,188.625C 512.637,190.461 514.875,192.925 516.137,196.243L 516.137,196.243C 517.327,199.379 518.501,202.519 519.711,205.647L 519.711,205.647C 522.109,211.851 524.419,218.089 526.979,224.227L 526.979,224.227C 528.403,227.647 531.083,229.751 534.935,230.04L 534.935,230.04C 536.793,230.18 538.663,230.465 540.515,230.392L 540.515,230.392C 546.151,230.176 551.809,230.076 557.401,229.42L 557.401,229.42C 561.385,228.955 563.172,226.485 562.643,222.569L 562.643,222.569C 561.773,216.141 561.085,209.608 559.337,203.396L 559.337,203.396C 554.132,184.879 544.004,169.357 529.656,156.513L 529.656,156.513C 525.336,152.647 521.348,148.379 517.453,144.071L 517.453,144.071C 510.835,136.756 511.008,124.495 517.629,116.013L 517.629,116.013C 519.659,113.419 519.541,112.795 517.288,110.333L 517.288,110.333C 514.413,107.188 511.531,104.031 508.889,100.695L 508.889,100.695C 492.94,80.5506 488.437,57.7053 493.331,32.6613L 493.331,32.6613C 493.407,32.648 493.769,32.5773 494.135,32.5253L 494.135,32.5253C 494.388,32.4866 494.643,32.4706 495.096,32.4266L 495.096,32.4266C 491.869,62.4426 504.495,85.4466 526.679,104.397L 526.679,104.397C 527.072,103.836 527.413,103.372 527.728,102.895L 527.728,102.895C 530.112,99.2946 532.432,95.6533 534.897,92.112L 534.897,92.112C 535.689,90.9787 536.864,90.112 538.031,88.9546L 538.031,88.9546C 539.508,92.1413 540.832,94.984 542.148,97.832L 542.148,97.832C 543.46,100.673 544.765,103.519 546.14,106.513L 546.14,106.513C 547.856,105.511 549.443,104.551 551.056,103.648L 551.056,103.648C 556.349,100.685 561.577,97.5933 566.979,94.8386L 566.979,94.8386C 570.715,92.932 574.255,93.8173 577.184,96.8227L 577.184,96.8227C 578.671,98.348 580.067,99.9666 581.524,101.52L 581.524,101.52C 585.781,106.071 590.583,109.763 596.815,111.2L 596.815,111.2C 601.645,112.312 604.356,110.827 605.913,106.173L 605.913,106.173C 607.091,102.659 609.036,101.571 612.715,101.831L 612.715,101.831C 614.285,101.94 616.195,101.777 617.455,100.968L 617.455,100.968C 622.377,97.7986 627.195,94.4493 631.859,90.9173L 631.859,90.9173C 634.663,88.792 634.945,86.168 633.159,83.108L 633.159,83.108C 632.168,81.4119 630.924,79.8613 629.867,78.2L 629.867,78.2C 626.653,73.1426 625.101,67.7026 625.779,61.6386L 625.779,61.6386C 625.999,59.6586 625.763,57.5813 625.433,55.6L 625.433,55.6C 624.556,50.3 621.964,45.8146 618.515,41.7733L 618.515,41.7733C 615.088,37.7586 613.513,33.1266 614.188,27.8573L 614.188,27.8573C 614.661,24.148 613.804,20.7706 612.009,17.58L 612.009,17.58C 610.713,15.2773 608.697,14.0666 606.064,14.3413L 606.064,14.3413C 604.071,14.5506 602.068,14.9653 600.145,15.5493L 600.145,15.5493C 594.283,17.3306 588.392,17.9853 582.332,16.672L 582.332,16.672C 576.352,15.376 570.348,14.18 564.352,12.9573L 564.352,12.9573C 555.856,11.224 547.315,10.284 538.623,11.1747L 538.623,11.1747C 533.224,11.7267 527.788,12.4493 522.388,12.3266L 522.388,12.3266C 511.636,12.0826 500.891,11.332 490.145,10.744L 490.145,10.744C 482.219,10.3093 474.301,9.69199 466.372,9.35332L 466.372,9.35332C 455.265,8.87598 444.232,10.216 433.177,10.9973L 433.177,10.9973C 424.875,11.5853 416.575,11.8853 408.269,11.032L 408.269,11.032C 406.563,10.856 404.733,12.0093 404.211,13.7373L 404.211,13.7373C 402.765,18.5266 401.045,23.2667 400.033,28.1493L 400.033,28.1493C 396.236,46.484 395.015,64.976 397.492,83.6106L 397.492,83.6106C 398.68,92.5626 401.112,101.105 405.668,108.991L 405.668,108.991C 407.716,112.529 409.509,116.209 411.419,119.827L 411.419,119.827C 411.325,119.936 411.232,120.045 411.137,120.152L 411.137,120.152C 410.687,119.824 410.161,119.563 409.793,119.157L 409.793,119.157C 408.536,117.78 407.275,116.396 406.121,114.937L 406.121,114.937C 402.257,110.052 397.899,105.459 394.703,100.167L 394.703,100.167C 384.028,82.4693 379.932,62.716 378.413,42.4373L 378.413,42.4373C 377.617,31.7733 378.08,21.016 377.973,10.3013L 377.973,10.3013C 377.969,9.6773 377.973,9.05332 377.973,8.3493L 377.973,8.3493C 368.913,7.54929 360.031,6.76531 351.173,5.9813L 351.173,5.9813C 347.473,19.3626 344.484,32.5853 343.271,46.1733L 343.271,46.1733C 341.755,63.1266 343.361,79.6786 349.164,95.7466L 349.164,95.7466C 349.287,96.0853 349.347,96.4453 349.433,96.7946L 349.433,96.7946C 348.987,96.632 348.771,96.4026 348.58,96.156L 348.58,96.156C 343.111,89.008 338.656,81.2826 335.331,72.9107L 335.331,72.9107C 327.895,54.1946 326.465,34.6453 327.247,14.7893L 327.247,14.7893C 327.388,11.1893 327.599,7.59063 327.779,3.93462L 327.779,3.93462C 319.088,3.13865 310.56,2.30531 302.019,1.59864L 302.019,1.59864C 298.244,1.28663 297.396,2.02398 296.413,5.71595L 296.413,5.71595C 292.055,22.124 289.585,38.78 289.924,55.796L 289.924,55.796C 290.069,63.2466 291.091,70.556 293.733,77.564L 293.733,77.564C 294.301,79.0666 293.768,80.244 293.175,81.6786L 293.175,81.6786C 292.809,81.148 292.56,80.8067 292.336,80.4506L 292.336,80.4506C 286.317,70.8453 281.989,60.532 279.359,49.5066L 279.359,49.5066C 275.984,35.3626 275.583,21.0306 276.656,6.60532L 276.656,6.60532C 276.815,4.44932 277.001,2.29729 277.18,0.0879898L 277.18,0.0879898C 276.788,0.0439529 276.583,-2.28882e-005 276.38,-2.28882e-005L 276.38,-2.28882e-005C 266.567,0.0133133 256.757,0.0239792 246.944,0.0519791 Z "/>
+        </DataTemplate>
+        
+        <Storyboard x:ConnectionId='3' x:Name="Storyboard1" RepeatBehavior="Forever">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="Ring1">
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="150">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <QuadraticEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="300">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <QuinticEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="Ring2">
+                <EasingDoubleKeyFrame KeyTime="0:0:2.4" Value="150">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <QuadraticEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.4" Value="300">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <QuinticEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="Ring3">
+                <EasingDoubleKeyFrame KeyTime="0:0:2.8" Value="150">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <QuadraticEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.8" Value="300">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <QuinticEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="Ring4">
+                <EasingDoubleKeyFrame KeyTime="0:0:3.1" Value="150">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <QuadraticEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:5.1" Value="300">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <QuinticEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="Ring5">
+                <EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="150">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <QuadraticEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:5.5" Value="300">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <QuinticEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Ring1">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.02">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <QuinticEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="1">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <QuadraticEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="0.02">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <QuinticEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Ring2">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0.02">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <QuinticEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.4" Value="1">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <QuadraticEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.4" Value="0.02">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <QuinticEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Ring3">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="0.02">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <QuinticEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.8" Value="1">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <QuadraticEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.8" Value="0.02">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <QuinticEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Ring4">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0.02">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <QuinticEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.1" Value="1">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <QuadraticEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:5.1" Value="0.02">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <QuinticEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Ring5">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="0.02">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <QuinticEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="1">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <QuadraticEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:5.5" Value="0.02">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <QuinticEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </UserControl.Resources>
+
+    <Interactivity:Interaction.Behaviors>
+        <Core:EventTriggerBehavior EventName="Loaded">
+            <Media:ControlStoryboardAction Storyboard="{StaticResource Storyboard1}"/>
+        </Core:EventTriggerBehavior>
+    </Interactivity:Interaction.Behaviors>
+
+    <Grid Height="20" Width="300">
+        <Grid x:ConnectionId='4' x:Name="Ring1" RenderTransformOrigin="0.5,0.5" Background="{x:Null}">
+            <Grid.RenderTransform>
+                <CompositeTransform/>
+            </Grid.RenderTransform>
+            <ContentControl ContentTemplate="{StaticResource Ring}" Content="{x:Null}"/>
+        </Grid>
+        <Grid x:ConnectionId='5' x:Name="Ring2" RenderTransformOrigin="0.5,0.5" Background="{x:Null}">
+            <Grid.RenderTransform>
+                <CompositeTransform/>
+            </Grid.RenderTransform>
+            <ContentControl ContentTemplate="{StaticResource Ring}" Content="{x:Null}"/>
+        </Grid>
+        <Grid x:ConnectionId='6' x:Name="Ring3" RenderTransformOrigin="0.5,0.5" Background="{x:Null}">
+            <Grid.RenderTransform>
+                <CompositeTransform/>
+            </Grid.RenderTransform>
+            <ContentControl ContentTemplate="{StaticResource Ring}" Content="{x:Null}"/>
+        </Grid>
+        <Grid x:ConnectionId='7' x:Name="Ring4" RenderTransformOrigin="0.5,0.5" Background="{x:Null}">
+            <Grid.RenderTransform>
+                <CompositeTransform/>
+            </Grid.RenderTransform>
+            <ContentControl ContentTemplate="{StaticResource Ring}" Content="{x:Null}"/>
+        </Grid>
+        <Grid x:ConnectionId='8' x:Name="Ring5" RenderTransformOrigin="0.5,0.5" Background="{x:Null}">
+            <Grid.RenderTransform>
+                <CompositeTransform/>
+            </Grid.RenderTransform>
+            <ContentControl ContentTemplate="{StaticResource Ring}" Content="{x:Null}"/>
+        </Grid>
+    </Grid>
+</UserControl>
+

@@ -1,0 +1,12 @@
+AboutPage.xbf
+App.xbf
+CourseSelectionDialog.xbf
+InstancePage.xbf
+MainPage.xbf
+Navigation\AppShell.xbf
+Navigation\UserControls\PageHeader.xbf
+SettingPage.xbf
+SignInPage.xbf
+Styles\ContentDialogStyle.xbf
+Styles\SplitViewStyles.xbf
+Styles\style.xbf
