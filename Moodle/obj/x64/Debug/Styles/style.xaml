@@ -14,7 +14,8 @@
     <SolidColorBrush x:Key="GridThirdRowBackgroundBrush" Color="#18FFFF" />
     <SolidColorBrush x:Key="GridFourthRowBackgroundBrush" Color="#64FFDA" />
     <SolidColorBrush x:Key="GridFifthRowBackgroundBrush" Color="#4FC3F7" />
-
+    <SolidColorBrush x:Key="GridSixthRowBackgroundBrush" Color="#BCAAA4" />
+    <SolidColorBrush x:Key="GridSeventhRowBackgroundBrush" Color="#3F51B5" />
     <SolidColorBrush x:Key="MoodleManagerBackgroundThemeBrush" Color="#616161" />
 
     <Style x:Key="GridHeadingTextBlockStyle" TargetType="TextBlock">

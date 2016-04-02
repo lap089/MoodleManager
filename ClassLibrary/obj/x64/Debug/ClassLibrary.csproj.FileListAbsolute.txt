@@ -7,7 +7,6 @@ C:\Users\user\Documents\Visual Studio 2015\Projects\MoodleManager\ClassLibrary\b
 C:\Users\user\Documents\Visual Studio 2015\Projects\MoodleManager\ClassLibrary\bin\x64\Debug\ClassLibrary.pri
 C:\Users\user\Documents\Visual Studio 2015\Projects\MoodleManager\ClassLibrary\bin\x64\Debug\Microsoft.Xaml.Interactions.dll
 C:\Users\user\Documents\Visual Studio 2015\Projects\MoodleManager\ClassLibrary\bin\x64\Debug\Microsoft.Xaml.Interactivity.dll
-C:\Users\user\Documents\Visual Studio 2015\Projects\MoodleManager\ClassLibrary\obj\x64\Debug\ClassLibrary.csprojResolveAssemblyReference.cache
 C:\Users\user\Documents\Visual Studio 2015\Projects\MoodleManager\ClassLibrary\obj\x64\Debug\UserControls\MyCustomLoading.g.i.cs
 C:\Users\user\Documents\Visual Studio 2015\Projects\MoodleManager\ClassLibrary\obj\x64\Debug\UserControls\MyCustomLoading.g.cs
 C:\Users\user\Documents\Visual Studio 2015\Projects\MoodleManager\ClassLibrary\obj\x64\Debug\UserControls\MyCustomLoginProcess.g.i.cs
@@ -35,3 +34,4 @@ C:\Users\user\Documents\Visual Studio 2015\Projects\MoodleManager\ClassLibrary\o
 C:\Users\user\Documents\Visual Studio 2015\Projects\MoodleManager\ClassLibrary\obj\x64\Debug\qualifiers.txt
 C:\Users\user\Documents\Visual Studio 2015\Projects\MoodleManager\ClassLibrary\obj\x64\Debug\qualifiers.txt.intermediate
 C:\Users\user\Documents\Visual Studio 2015\Projects\MoodleManager\ClassLibrary\obj\x64\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\user\Documents\Visual Studio 2015\Projects\MoodleManager\ClassLibrary\obj\x64\Debug\ClassLibrary.csprojResolveAssemblyReference.cache

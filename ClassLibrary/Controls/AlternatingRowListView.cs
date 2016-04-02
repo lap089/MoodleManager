@@ -113,6 +113,12 @@ namespace MoodleManager.Controls
                     case 5:
                         listViewItem.Background = FifthRowBackground;
                         break;
+                    case 6:
+                        listViewItem.Background = SixthRowBackground;
+                        break;
+                    case 7:
+                        listViewItem.Background = SeventhRowBackground;
+                        break;
 
                 }
             }

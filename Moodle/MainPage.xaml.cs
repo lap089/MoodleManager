@@ -16,6 +16,7 @@ using Windows.ApplicationModel.Activation;
 using Windows.ApplicationModel.Background;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
 using Windows.System.Threading;
 using Windows.UI.Core;
 using Windows.UI.Notifications;
@@ -25,6 +26,7 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
 
@@ -45,7 +47,7 @@ namespace MoodleManager
         {
             SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility = AppViewBackButtonVisibility.Collapsed;
             this.InitializeComponent();
-
+          
             //   NotificationHelper.UpdateTile(100);
             //  GetData();
             // var checktask = BackgroundHelper.FindRegistration<BackgroundNotifier>();
@@ -85,13 +87,14 @@ namespace MoodleManager
         {
       //     await NotificationHelper.Connect(NotificationHelper.user, NotificationHelper.pass);
             clearAllData();
-      //      await CmfromFile.LoadDataFromFileAsync();
+            await CmfromFile.LoadDataFromFileAsync();
             await ViewModel.LoadDataFromRemote();
             //  await Task.Delay(TimeSpan.FromSeconds(5));
             ListCourse.ItemsSource = ViewModel.courses;
 
             //  InstViewModel.ComparationProcess(ViewModel, CmfromFile);
-            await  InstViewModel.ReadFile(NotificationHelper.NEWINSTANCEFILE);
+            //  await  InstViewModel.ReadFile(NotificationHelper.NEWINSTANCEFILE);
+            await InstViewModel.getNewInstances(ViewModel, CmfromFile);
             Newins.ItemsSource = InstViewModel.instances;
 
             //     InstViewModel.IsCompleted = true;
@@ -131,7 +134,15 @@ namespace MoodleManager
         protected override async void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-          
+
+            Brush b;
+            ImageBrush a = new ImageBrush();
+            StorageFile file = await StorageFile.GetFileFromPathAsync(@"C://Users//user//Pictures//WIN_20150513_103038.JPG");
+            BitmapImage bmp = new BitmapImage();
+            await bmp.SetSourceAsync(await file.OpenAsync(FileAccessMode.Read));
+         //   a.ImageSource = bmp;
+          //  HomePage.Background = a;
+
             try
             {
                 MainPageContainer temp = (MainPageContainer)e.Parameter;

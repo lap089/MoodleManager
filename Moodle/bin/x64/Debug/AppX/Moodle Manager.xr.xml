@@ -297,6 +297,8 @@
       <RootProperty Name="ThirdRowBackground" />
       <RootProperty Name="FourthRowBackground" />
       <RootProperty Name="FifthRowBackground" />
+      <RootProperty Name="SixthRowBackground" />
+      <RootProperty Name="SeventhRowBackground" />
       <RootProperty Name="Header" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />

@@ -18,7 +18,7 @@ namespace MoodleManager
 {
     public class NotificationHelper
     {
-
+       
 
         public static String PRIORITYFILE = "Priority.json";
         public static String NEWINSTANCEFILE = "NewInstances.json";
@@ -79,8 +79,9 @@ namespace MoodleManager
                     if (insts.instances[i].GetTime.CompareTo(insts.instances[j].GetTime) == -1)
                     {
                         DateTime temp = insts.instances[i].GetTime;
-                        insts.instances[i] = insts.instances[j];
-                        insts.instances[j] = insts.instances[i];
+                        var inst = insts.instances[i];
+                        insts.instances[i] = insts.instances[j]; 
+                        insts.instances[j] = inst;
                     }
             return insts;
         }

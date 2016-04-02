@@ -48,21 +48,18 @@ namespace BackgroundNotification
                     await CmFromRemote.LoadDataFromRemote();
                     await CmFromLocal.LoadDataFromFileAsync();
                     Instances newInsts = new Instances();
-                    newInsts = NotificationHelper.ComparationProcess(CmFromRemote, CmFromLocal);
-                    Instances instFromFile = new Instances();
-                    await instFromFile.ReadFile(NotificationHelper.NEWINSTANCEFILE);
-                    
-                    foreach(Instance inst in instFromFile.instances)
-                        newInsts.Addinstance(inst);
+                    //   newInsts = NotificationHelper.ComparationProcess(CmFromRemote, CmFromLocal);
+                    //  Instances instFromFile = new Instances();
+                    await newInsts.getNewInstances(CmFromRemote, CmFromLocal);
 
                     if (newInsts.Count() != 0)
                     {
                         //  NotificationHelper.UpdateTile(newInsts);
                         //   else
-                        newInsts = NotificationHelper.SortByDate(newInsts);
+                  // newInsts = NotificationHelper.SortByDate(newInsts);
                         NotificationHelper.UpdateToast(newInsts);
                         NotificationHelper.MakeTile(newInsts);
-                        await newInsts.WriteFile(NotificationHelper.NEWINSTANCEFILE);
+                  //      await newInsts.WriteFile(NotificationHelper.NEWINSTANCEFILE);
                     }
 
                     Debug.WriteLine("Background task complete: ");

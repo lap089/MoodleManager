@@ -102,6 +102,24 @@ namespace MoodleManager
         }
 
 
+
+        /*  Get and save new instances */
+        public async Task getNewInstances(CourseManager CmFromRemote, CourseManager CmFromLocal)
+        {
+            Instances insts = new Instances();
+            ComparationProcess(CmFromRemote, CmFromLocal);
+            await insts.ReadFile(NotificationHelper.NEWINSTANCEFILE);
+            foreach (Instance inst in instances)
+                insts.Addinstance(inst);
+
+           insts = NotificationHelper.SortByDate(insts);
+            instances.Clear();
+            foreach (Instance inst in insts.instances)
+                Addinstance(inst);
+
+            await WriteFile(NotificationHelper.NEWINSTANCEFILE);           // write to file
+        }
+
         public async Task ReadFile(String filename)
         {
             if (!NotificationHelper.IsFileExist(filename)) { IsCompleted = true;  return; }
