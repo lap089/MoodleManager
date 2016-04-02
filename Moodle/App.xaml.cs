@@ -42,7 +42,7 @@ namespace MoodleManager
         /// will be used such as when the application is launched to open a specific file.
         /// </summary>
         /// <param name="e">Details about the launch request and process.</param>
-        protected override async void OnLaunched(LaunchActivatedEventArgs e)
+        protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
 
 #if DEBUG
@@ -54,26 +54,26 @@ namespace MoodleManager
 
 
             var localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
-            if (localSettings.Values["Username"] != null)
-            {
-                string user = localSettings.Values["Username"].ToString();
-                string pass = localSettings.Values["Password"].ToString();
-                await NotificationHelper.Connect(user, pass);
+            //if (localSettings.Values["Username"] != null)
+            //{
+            //    string user = localSettings.Values["Username"].ToString();
+            //    string pass = localSettings.Values["Password"].ToString();
+            //    await NotificationHelper.Connect(user, pass);
 
-                CourseManager CmFromRemote = new CourseManager();
-                CourseManager CmFromLocal = new CourseManager();
-                await CmFromRemote.LoadDataFromRemote();
-                await CmFromLocal.LoadDataFromFileAsync();
-                Instances newInsts = new Instances();
-                newInsts = NotificationHelper.ComparationProcess(CmFromRemote, CmFromLocal);
-                if (newInsts.Count() != 0)
-                {
-                    //  NotificationHelper.UpdateTile(newInsts);
-                    //   else
-                    NotificationHelper.UpdateToast(newInsts);
-                }
+            //    CourseManager CmFromRemote = new CourseManager();
+            //    CourseManager CmFromLocal = new CourseManager();
+            //    await CmFromRemote.LoadDataFromRemote();
+            //    await CmFromLocal.LoadDataFromFileAsync();
+            //    Instances newInsts = new Instances();
+            //    newInsts = NotificationHelper.ComparationProcess(CmFromRemote, CmFromLocal);
+            //    if (newInsts.Count() != 0)
+            //    {
+            //        //  NotificationHelper.UpdateTile(newInsts);
+            //        //   else
+            //        NotificationHelper.UpdateToast(newInsts);
+            //    }
 
-            }
+            //}
 
 
             Frame rootFrame = Window.Current.Content as Frame;

@@ -77,7 +77,7 @@ namespace MoodleManager
             }
         }
 
-
+           /*  Update date for instances   */
         public async Task<ObservableCollection<Instance>> RefineInstance()
         {
             Instances instFromLocal = new Instances();
@@ -104,7 +104,7 @@ namespace MoodleManager
 
         public async Task ReadFile(String filename)
         {
-            if (!NotificationHelper.IsFileExist(filename)) return;
+            if (!NotificationHelper.IsFileExist(filename)) { IsCompleted = true;  return; }
 
             var jsonSerializer = new DataContractJsonSerializer(typeof(ObservableCollection<Instance>));
             using (var stream = await ApplicationData.Current.LocalFolder.OpenStreamForReadAsync(filename))
@@ -124,6 +124,8 @@ namespace MoodleManager
                     }
                 }
             }
+
+            IsCompleted = true;
         }
 
        

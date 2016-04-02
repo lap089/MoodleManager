@@ -49,6 +49,12 @@ namespace BackgroundNotification
                     await CmFromLocal.LoadDataFromFileAsync();
                     Instances newInsts = new Instances();
                     newInsts = NotificationHelper.ComparationProcess(CmFromRemote, CmFromLocal);
+                    Instances instFromFile = new Instances();
+                    await instFromFile.ReadFile(NotificationHelper.NEWINSTANCEFILE);
+                    
+                    foreach(Instance inst in instFromFile.instances)
+                        newInsts.Addinstance(inst);
+
                     if (newInsts.Count() != 0)
                     {
                         //  NotificationHelper.UpdateTile(newInsts);

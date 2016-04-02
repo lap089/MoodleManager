@@ -85,13 +85,14 @@ namespace MoodleManager
         {
       //     await NotificationHelper.Connect(NotificationHelper.user, NotificationHelper.pass);
             clearAllData();
-            await CmfromFile.LoadDataFromFileAsync();
+      //      await CmfromFile.LoadDataFromFileAsync();
             await ViewModel.LoadDataFromRemote();
             //  await Task.Delay(TimeSpan.FromSeconds(5));
             ListCourse.ItemsSource = ViewModel.courses;
-            
-           InstViewModel.ComparationProcess(ViewModel, CmfromFile);
-           // Newins.ItemsSource = InstViewModel.instances;
+
+            //  InstViewModel.ComparationProcess(ViewModel, CmfromFile);
+            await  InstViewModel.ReadFile(NotificationHelper.NEWINSTANCEFILE);
+            Newins.ItemsSource = InstViewModel.instances;
 
             //     InstViewModel.IsCompleted = true;
             await UpcomingViewModel.getUpcomingEvents();
